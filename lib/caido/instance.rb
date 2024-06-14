@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require 'httparty'
+require 'json'
 
 module Caido
   # Instance class
@@ -12,6 +14,17 @@ module Caido
                       else
                         "Bearer #{authorization}"
                       end
+    end
+
+    def query(query)
+      HTTParty.post(
+        graphql_url,
+        body: { query: query }.to_json,
+        headers: {
+          'Content-Type' => 'application/json',
+          'Authorization' => authorization
+        }
+      )
     end
   end
 end
