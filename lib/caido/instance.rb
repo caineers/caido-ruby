@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'httparty'
 require 'json'
 
@@ -10,10 +11,10 @@ module Caido
     def initialize(graphql_url, authorization)
       @graphql_url = graphql_url
       @authorization = if 'Bearer '.include?(authorization)
-                        authorization
-                      else
-                        "Bearer #{authorization}"
-                      end
+                         authorization
+                       else
+                         "Bearer #{authorization}"
+                       end
     end
 
     def query(query)
