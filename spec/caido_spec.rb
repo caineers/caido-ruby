@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative "../lib/caido/instance.rb"
+
 RSpec.describe Caido do
   it 'has a version number' do
     expect(Caido::VERSION).not_to be nil
