@@ -18,7 +18,7 @@ module Caido
     end
 
     def query(query)
-      HTTParty.post(
+      res = HTTParty.post(
         graphql_url,
         body: { query: query }.to_json,
         headers: {
@@ -26,6 +26,17 @@ module Caido
           'Authorization' => authorization
         }
       )
+
+      obj = JSON.parse(res.body)
+      obj['data']
+    end
+
+    def version
+      query('{runtime{version}}')['runtime']['version']
+    end
+
+    def platform
+      query('{runtime{platform}}')['runtime']['platform']
     end
   end
 end
