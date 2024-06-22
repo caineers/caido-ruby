@@ -3,6 +3,9 @@
 require 'httparty'
 require 'json'
 
+# Assuming this code is at the top level of instance.rb and helplers directory is at the same level
+Dir[File.expand_path('helpers/*.rb', __dir__)].sort.each { |file| require file }
+
 module Caido
   # Instance class
   class Instance
@@ -29,14 +32,6 @@ module Caido
 
       obj = JSON.parse(res.body)
       obj['data']
-    end
-
-    def version
-      query('{runtime{version}}')['runtime']['version']
-    end
-
-    def platform
-      query('{runtime{platform}}')['runtime']['platform']
     end
   end
 end
