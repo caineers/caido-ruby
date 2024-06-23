@@ -1,4 +1,6 @@
-# Caido
+
+<img alt="caido-ruby" src="https://github.com/caineers/caido-ruby/assets/13212227/b58b2d5e-890c-49c2-a5f5-06168267beae" width="450px;">
+
 ## Installation
 
 ```bash
