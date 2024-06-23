@@ -11,6 +11,13 @@ gem install caido
 require 'caido'
 
 instance = Caido::Instance.new "http://localhost:8080", "AUTH_TOKEN"
+
+# Use helper
+instance.version # 0.38.0
+instance.projects # [...]
+
+# Use GraphQL Query
+instance.query('{runtime{platform}}')
 ```
 
 ## Development
