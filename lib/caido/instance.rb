@@ -43,5 +43,19 @@ module Caido
     def auth_from_env
       @auth_from_env ||= ENV.fetch('CAIDO_AUTH_TOKEN', 'Bearer ')
     end
+
+    def query(query)
+      res = HTTParty.post(
+        graphql_url,
+        body: { query: }.to_json,
+        headers: {
+          'Content-Type' => 'application/json',
+          'Authorization' => authorization
+        }
+      )
+
+      obj = JSON.parse(res.body)
+      obj['data']
+    end
   end
 end
