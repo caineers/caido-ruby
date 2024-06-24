@@ -1,6 +1,10 @@
 
 <img alt="caido-ruby" src="https://github.com/caineers/caido-ruby/assets/13212227/b58b2d5e-890c-49c2-a5f5-06168267beae" width="450px;">
 
+## Introduction
+
+Caido is a lightweight web security auditing toolkit designed to assist developers and security professionals in identifying vulnerabilities within web applications. The caido-ruby library serves as a Ruby implementation of Caido's API, providing a seamless and efficient way for Ruby developers to integrate Caido's powerful security auditing capabilities into their applications.
+
 ## Installation
 
 ```bash

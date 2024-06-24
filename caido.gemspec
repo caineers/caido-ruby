@@ -8,8 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors = ['HAHWUL']
   spec.email = ['hahwul@gmail.com']
 
-  spec.summary = 'Ruby implementation of Caido\'s API'
-  spec.description = 'Ruby implementation of Caido\'s API. Caido is lightweight web security auditing toolkit.'
+  spec.summary = 'The caido-ruby library simplifies using Caido\'s API in Ruby applications.'
+  spec.description = 'The caido-ruby library simplifies using Caido\'s API in Ruby applications.
+                      Caido is lightweight web security auditing toolkit.'
   spec.homepage = 'https://rubygems.org/gems/caido'
   spec.required_ruby_version = '>= 3.1.0'
 
