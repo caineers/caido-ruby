@@ -8,10 +8,13 @@ Gem::Specification.new do |spec|
   spec.authors = ['HAHWUL']
   spec.email = ['hahwul@gmail.com']
 
-  spec.summary = 'Ruby implementation of Caido'
-  spec.description = 'Tuby implementation of Caido'
-  spec.homepage = 'https://github.com/caineers/caido-ruby'
+  spec.summary = 'Ruby implementation of Caido\'s API'
+  spec.description = 'Ruby implementation of Caido\'s API. Caido is lightweight web security auditing toolkit.'
+  spec.homepage = 'https://rubygems.org/gems/caido'
   spec.required_ruby_version = '>= 3.1.0'
+
+  # SPDX license identifier for the MIT license
+  spec.license = 'MIT'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/caineers/caido-ruby'
