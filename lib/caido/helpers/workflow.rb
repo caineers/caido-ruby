@@ -17,5 +17,20 @@ module Caido
         }
       }')['workflows']
     end
+
+    def workflow(id)
+      query("query{
+        workflow(id: \"#{id}\"){
+          id
+          name
+          kind
+          enabled
+          global
+          definition
+          createdAt
+          updatedAt
+        }
+      }")['workflow']
+    end
   end
 end
