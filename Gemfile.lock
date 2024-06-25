@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    caido (0.0.0.pre.dev)
+    caido (0.1.0)
       graphql (~> 2.3.0)
       httparty (~> 0.22.0)
 
