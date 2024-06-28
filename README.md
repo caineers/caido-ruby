@@ -22,6 +22,7 @@ instance = Caido::Instance.new "http://localhost:8080", "AUTH_TOKEN"
 instance.version # 0.38.0
 instance.projects # [...]
 instance.replay_sessions # [{"name"=>"1", "activeEntry"=> {"request"=> ... ]
+instance.request(12) # {"id"=>"12", "host"=>"www.hahwul.com", "method"=>"GET", ... }
 
 # Use GraphQL Query
 instance.query('{runtime{platform}}')
