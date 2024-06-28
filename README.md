@@ -16,6 +16,7 @@ gem install caido
 ```ruby
 require 'caido'
 
+# Init instance
 instance = Caido::Instance.new "http://localhost:8080", "AUTH_TOKEN"
 
 # Use helper
