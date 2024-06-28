@@ -11,7 +11,6 @@ permissions:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,6 +22,8 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+        bundler-cache: true
+    - name: Ensure Bundler is not in frozen mode
+      run: bundle config set --local frozen false
     - name: Run tests
       run: bundle exec rake
