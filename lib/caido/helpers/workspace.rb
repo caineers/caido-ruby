@@ -13,5 +13,20 @@ module Caido
         }
       }')['projects']
     end
+
+    def backups
+      query('query{
+        backups{
+          id
+          name
+          status
+          updatedAt
+          createdAt
+          path
+          size
+          downloadUri
+        }
+      }')['backups']
+    end
   end
 end
