@@ -39,7 +39,7 @@ module Caido
       }")['replaySession']
     end
 
-    def all_replay
+    def replay_sessions
       sessions_data = []
       collections = query('query {
         replaySessionCollections{
