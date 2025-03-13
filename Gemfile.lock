@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     caido (0.2.0)
-      graphql (~> 2.3.0)
+      graphql (>= 2.3, < 2.5)
       httparty (~> 0.22.0)
 
 GEM
@@ -13,8 +13,10 @@ GEM
     bigdecimal (3.1.8)
     csv (3.3.0)
     diff-lcs (1.5.1)
-    graphql (2.3.7)
+    fiber-storage (1.0.0)
+    graphql (2.3.21)
       base64
+      fiber-storage
     httparty (0.22.0)
       csv
       mini_mime (>= 1.0.0)
